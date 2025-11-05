@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://tdevansh793:Tomar123@cluster0.2zu7csa.mongodb.net/journalDb?retryWrites=true&w=majority&appName=Cluster0
+      auto-index-creation: true
+
+server:
+  port: 8081
+

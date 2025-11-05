@@ -1,0 +1,30 @@
+spring:
+  data:
+    mongoDb:
+      uri: mongodb+srv://tdevansh793:Tomar123@cluster0.2zu7csa.mongodb.net/journalDb?retryWrites=true&w=majority&appName=Cluster0
+      auto-index-creation : true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tdevansh793@gmail.com
+    password: ydrzimvovmuacxfl
+
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+server:
+  port: 8081
+
+
+logging:
+  level:
+    org.springframework.mail: DEBUG
+    javax.mail: DEBUG
+
+
