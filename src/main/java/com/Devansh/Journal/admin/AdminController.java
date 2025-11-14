@@ -1,7 +1,8 @@
-package com.Devansh.Journal.Cotroller;
+package com.Devansh.Journal.admin;
 
 import com.Devansh.Journal.Entity.User;
 import com.Devansh.Journal.Service.User_Service;
+import com.Devansh.Journal.appcache.appCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,8 @@ public class AdminController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+    @Autowired
+    private appCache appCache;
 
 
 
@@ -30,5 +33,12 @@ public class AdminController {
     public void createUser(@RequestBody  User user){
         userService.saveAdmin(user);
     }
+
+
+    @GetMapping("/clear_cache")
+    public void clearCache(){
+        appCache.init();
+    }
+
 
 }

@@ -21,6 +21,10 @@ spring:
 server:
   port: 8081
 
+weather:
+  api:
+    key: "e6f91035d9ae6676106c1013918435e6"
+
 
 logging:
   level:
