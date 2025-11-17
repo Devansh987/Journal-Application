@@ -42,6 +42,7 @@ public class Public {
             UserDetails userDetails = userDetailService.loadUserByUsername(user.getUserName());
             String token = jwtutil.generateToken(userDetails.getUsername());
             return new ResponseEntity<>(token,HttpStatus.OK);
+
         } catch (Exception e) {
             log.error("Exception while creating authentication token ",e);
 
